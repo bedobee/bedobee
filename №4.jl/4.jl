@@ -38,4 +38,4 @@ function plus!(robot)
     putmarker!(robot)
 end
 
-plus!(Robot("fr.sit", animate=true))
+plus!(Robot("dj.sit", animate=true))
