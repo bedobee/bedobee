@@ -1,21 +1,19 @@
 using HorizonSideRobots
-function cross(robot)
-    putmarker!(robot)
-    for side in(Nord,Sud,Ost,West)
-        along_and_gohome(robot,side)
+function perimeter!(robot)
+    corner!(robot)
+    for side in (Ost, Nord, West, Sud)
+        while !isborder(robot, side)
+            move!(robot, side)
+            putmarker!(robot)
+        end
     end
 end
 
-function along_and_gohome(robot,side)
-    num_steps = 0
-    while !isborder(robot,side)
-        move!(robot,side)
-        putmarker!(robot)
-        num_steps += 1
+function corner!(robot)
+    while !isborder(robot, Sud)
+        move!(robot, Sud)
     end
-    for i in 1:num_steps
-        move!(robot,inverse(side))
+    while !isborder(robot, West)
+        move!(robot, West)
     end
 end
-
-inverse(side::HorizonSide)::HorizonSide = HorizonSide((Int(side)+2)%4)
