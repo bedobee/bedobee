@@ -7,7 +7,7 @@
 #r=Robot("16.sit",animate=true)
 #solve!(r,Nord)
 
-function shuttle!(stop_condition::Function, robot, side)
+function shuttle!(stop_condition::Function, robot, side) #перемещает робота взад вперед (челнок)
     n=0 
     while !stop_condition() 
     n += 1
