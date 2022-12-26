@@ -99,12 +99,12 @@ function along_frame!(robot) #Маркеры вокруг рамки
 end
 
 function solve!(robot)
-num_steps_Sud,num_steps_West=find_corner!(robot)
-find_frame!(robot)
-along_frame!(robot)
-find_corner!(robot)
-perimetr!(robot)
-go_home!(robot, num_steps_Sud, num_steps_West)
+    num_steps_Sud,num_steps_West=find_corner!(robot)
+    find_frame!(robot)
+    along_frame!(robot)
+    find_corner!(robot)
+    perimetr!(robot)
+    go_home!(robot, num_steps_Sud, num_steps_West)
 end
 
 right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+1, 4))
