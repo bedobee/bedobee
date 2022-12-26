@@ -4,7 +4,7 @@
 #Ввести в терминал:
 #>julia
 #using HorizonSideRobots
-#include("№7.jl")
+#include("7.jl")
 #r=Robot("7.sit",animate=true)
 #solve!(r)
 
