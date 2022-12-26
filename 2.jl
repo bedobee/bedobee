@@ -1,4 +1,5 @@
 using HorizonSideRobots
+r=Robot(15,15; animate=true)
 function perimeter!(robot)
     corner!(robot)
     for side in (Ost, Nord, West, Sud)
@@ -17,3 +18,5 @@ function corner!(robot)
         move!(robot, West)
     end
 end
+perimeter!(r)
+corner!(r)
