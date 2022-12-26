@@ -1,4 +1,5 @@
 using HorizonSideRobots
+r=Robot(15,15; animate=true)
 function full!(robot)
     corner!(robot)
     putmarker!(robot)
@@ -24,3 +25,5 @@ function corner!(robot)
 end
 
 inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
+full!(r)
+corner!(r)
