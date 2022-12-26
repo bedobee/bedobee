@@ -5,7 +5,7 @@
 #Ввести в терминал:
 #julia
 #using HorizonSideRobots
-#include("6.jl")
+#include("№6.jl")
 
 #mutable struct Coordinates
 #    x::Int
